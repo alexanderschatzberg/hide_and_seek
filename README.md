@@ -1,3 +1,3 @@
-# kivy_pong
+# hide_and_seek
 
-Super simple python game to learn the basics of kivy in order to use it in a larger project with tensorflow.
+This is a python project that uses Tensorflow and Kivy to create a simple game where two AI agents play hide and seek. This project was created as a way to learn more about Tensorflow and Kivy.
