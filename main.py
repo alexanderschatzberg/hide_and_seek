@@ -1,10 +1,5 @@
 import arcade 
 
-"""
-Platformer Game
-"""
-import arcade
-
 # Constants
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
@@ -32,21 +27,20 @@ class MyGame(arcade.Window):
         self.wall_list = arcade.SpriteList()
 
         # Set up both sprites and their starting positions
-        self.redSprite = arcade.Sprite("static/redSprite.png", 0.1)
-        self.greenSprite = arcade.Sprite("static/greenSprite.png", 0.1)
+        self.red_sprite = arcade.Sprite("static/redSprite.png", 0.1)
+        self.green_sprite = arcade.Sprite("static/greenSprite.png", 0.1)
 
-        self.redSprite.center_x = (SCREEN_WIDTH / 2) + 100
-        self.redSprite.center_y = (SCREEN_HEIGHT / 2)
-        self.greenSprite.center_x = (SCREEN_WIDTH / 2) - 100
-        self.greenSprite.center_y = (SCREEN_HEIGHT / 2) 
+        self.red_sprite.center_x = (SCREEN_WIDTH / 2) + 100
+        self.red_sprite.center_y = (SCREEN_HEIGHT / 2)
+        self.green_sprite.center_x = (SCREEN_WIDTH / 2) - 100
+        self.green_sprite.center_y = (SCREEN_HEIGHT / 2) 
 
-        self.player_list.append(self.redSprite)
-        self.player_list.append(self.greenSprite)
-
+        self.player_list.append(self.red_sprite)
+        self.player_list.append(self.green_sprite)
         # Create the 'physics engine'
-        self.physics_engine = arcade.PhysicsEngineSimple(self.redSprite, self.wall_list)
+        self.physics_engine = arcade.PhysicsEngineSimple(self.red_sprite, self.wall_list)
 
-        self.player_sprite = self.redSprite
+        self.player_sprite = self.red_sprite
 
     def on_draw(self):
         """Render the screen."""
